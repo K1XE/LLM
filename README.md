@@ -7,10 +7,11 @@
     ♾️<a href="https://www.jackzhu.top/categories/%E9%9D%A2%E8%AF%95%E8%AE%B0%E5%BD%95/" target="_blank">Jack's Blog</a>
   </p>
   <p>
-    ♾️<a href="https://github.com/volcengine/verl/blob/main/verl/trainer/ppo/core_algos.py" target="_blank">veRL core_algos</a>
+    ♾️<a href="https://github.com/volcengine/verl/blob/main/verl/trainer/ppo/core_algos.py" target="_blank">veRL-core-algos</a>
   </p>
   <p>
-    ♾️<a href="https://github.com/volcengine/verl/blob/main/verl/trainer/ppo/core_algos.py" target="_blank">veRL core_algos</a>
+    ♾️<a href="https://github.com/boyu-ai/Hands-on-RL" target="_blank">Hands-on-RL
+</a>
   </p>
   <p>
     ♾️<a href="https://pcnik3wco47l.feishu.cn/wiki/RZsswSD1eiK7vykbgy8cHfSsnaf" target="_blank">手撕小记</a>
