@@ -38,11 +38,11 @@ def kl_penalty(logp, ref_logp, kl_mode):
 
 def compute_gae_returns(values, rewards, gamma, lam):
     l = values.shape[0]
-    nextvalue = 0
     rev_gae = []
     gae = 0
     for t in reversed(range(l)):
-        delta = rewards[t, :] + gamma * nextvalue - values[t, :]
+        nextvalue = values[:, t + 1] if t < l else 0.0
+        delta = rewards[:, t] + gamma * nextvalue - values[:, t]
         gae = delta + lam * gamma * gae
         rev_gae.append(gae)
     res = torch.stack(rev_gae[::-1], dim=1)
