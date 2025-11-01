@@ -56,14 +56,14 @@ class MLA(nn.Module):
         self.down_dim = down_dim
         self.up_dim = up_dim
         self.rope_dim = rope_dim
-        self.dropout_dim = dropout_rate
+        self.dropout_rate = dropout_rate
         self.down_proj_kv = nn.Linear(hidden_dim, down_dim)
         self.down_proj_q = nn.Linear(hidden_dim, down_dim)
         self.up_proj_k = nn.Linear(down_dim, up_dim)
         self.up_proj_v = nn.Linear(down_dim, up_dim)
         self.up_proj_q = nn.Linear(down_dim, up_dim)
         self.proj_qr = nn.Linear(down_dim, rope_dim * num_heads)
-        self.proj_kr = nn.Linear(down_dim, rope_dim)
+        self.proj_kr = nn.Linear(hidden_dim, rope_dim)
         self.rope_q = RotaryEmbedding(rope_dim * num_heads, num_heads)
         self.rope_k = RotaryEmbedding(rope_dim, 1)
         self.dropout = nn.Dropout(dropout_rate)

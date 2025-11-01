@@ -95,7 +95,7 @@ class MLA(nn.Module):
         k_t_r = k_t_r.repeat(1, self.num_heads, 1, 1)
         k = torch.cat([k_t_c, k_t_r], dim=-1)
         attn_scores = torch.matmul(q, k.transpose(-1, -2)) / (
-            self.num_heads**0.5 + self.rope_head_dim**0.5
+            self.head_dim**0.5 + self.rope_head_dim**0.5
         )
         if mask is not None:
             attn_scores = attn_scores.masked_fill(mask == 0, -1e9)
